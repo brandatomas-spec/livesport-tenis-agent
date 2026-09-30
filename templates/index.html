@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Livesport Tenis Agent</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Livesport Tenis Agent 🎾</h1>
+        <form action="/run" method="post">
+            <button type="submit" class="btn-run">🔄 PROVĚŘIT DNEŠNÍ ZÁPASY</button>
+        </form>
+        
+        {% if results %}
+        <div class="results-section">
+            <h2>Výsledky analýzy:</h2>
+            <div class="results-box">
+                {{ results | safe }}
+            </div>
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>
